@@ -1,0 +1,8 @@
+{
+  "name": "shuangqi-backend",
+  "version": "1.0.0",
+  "description": "爽栖林城民宿经营助手后端",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
