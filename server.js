@@ -8,8 +8,13 @@ const url = require('url');
 const tcb = require('@cloudbase/node-sdk');
 const https = require('https');
 
-const env = process.env.TCB_ENV || 'shuangqi-d4gq36kcz9245cc95';
-const app = tcb.init({ env });
+const env = process.env.TCB_ENV || process.env.CLOUDBASE_ENV || 'shuangqi-d4gq36kcz9245cc95';
+const app = tcb.init({
+  env,
+  secretId: process.env.TENCENTCLOUD_SECRETID,
+  secretKey: process.env.TENCENTCLOUD_SECRETKEY
+});
+
 const db = app.database();
 const _ = db.command;
 
