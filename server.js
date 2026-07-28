@@ -4,8 +4,13 @@ const url = require('url');
 const tcb = require('@cloudbase/node-sdk');
 const https = require('https');
 
-// 显式传入 env 确保云托管容器能定位到正确的 CloudBase 环境
-const app = tcb.init({ env: 'shuangqi-d4gq36kcz9245cc95' });
+// 云托管容器需要显式凭证：env + CAM密钥
+// 环境变量 TENCENTCLOUD_SECRETID / TENCENTCLOUD_SECRETKEY 已在云托管控制台配置
+const app = tcb.init({
+  env: 'shuangqi-d4gq36kcz9245cc95',
+  secretId: process.env.TENCENTCLOUD_SECRETID,
+  secretKey: process.env.TENCENTCLOUD_SECRETKEY
+});
 const db = app.database();
 const _ = db.command;
 
