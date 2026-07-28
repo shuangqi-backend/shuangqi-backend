@@ -1,0 +1,12 @@
+{
+  "name": "shuangqi-xiaoqi",
+  "version": "2.0.0",
+  "description": "爽栖林城民宿经营助手-问小栖后端(CloudBase云托管版)",
+  "main": "server.js",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
