@@ -1,5 +1,0 @@
-{
-  "endpoint": "https://api.deepseek.com/chat/completions",
-  "key": "在此填入你的大模型 API Key（如 DeepSeek / 兼容 OpenAI 的接口）",
-  "model": "deepseek-chat"
-}
